@@ -45,12 +45,15 @@ add_library(codecs STATIC
     ${CODECS_SRCS}
 )
 
+find_package(XercesC)
 target_link_libraries(codecs
     PRIVATE
         common
+        XercesC::XercesC
+        messages
 )
 
-target_include_directories(common
+target_include_directories(codecs
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/../
 )

@@ -8,10 +8,11 @@ add_library(application STATIC
     ${APPLICATION_SRCS}
 )
 
-target_link_libraries(codecs
+target_link_libraries(application
     PRIVATE
         common
-        Communication
+        communication
+        codecs
 )
 
 find_package(Boost 1.65.0)
