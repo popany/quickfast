@@ -1,0 +1,56 @@
+set(CODECS_SRCS
+    BasePacketAssembler.cpp
+    Context.cpp
+    DataSource.cpp
+    DataSourceBuffer.cpp
+    DataSourceBufferedStream.cpp
+    DataSourceStream.cpp
+    DataSourceString.cpp
+    Decoder.cpp
+    DictionaryIndexer.cpp
+    Encoder.cpp
+    FastEncodedHeaderAnalyzer.cpp
+    FieldInstruction.cpp
+    FieldInstructionAscii.cpp
+    FieldInstructionBlob.cpp
+    FieldInstructionByteVector.cpp
+    FieldInstructionDecimal.cpp
+    FieldInstructionGroup.cpp
+    FieldInstructionSequence.cpp
+    FieldInstructionTemplateRef.cpp
+    FieldInstructionUtf8.cpp
+    FieldOp.cpp
+    FieldOpConstant.cpp
+    FieldOpCopy.cpp
+    FieldOpDefault.cpp
+    FieldOpDelta.cpp
+    FieldOpIncrement.cpp
+    FieldOpTail.cpp
+    FixedSizeHeaderAnalyzer.cpp
+    GenericMessageBuilder.cpp
+    MessagePerPacketAssembler.cpp
+    MulticastDecoder.cpp
+    PacketSequencingAssembler.cpp
+    PresenceMap.cpp
+    SchemaElement.cpp
+    SegmentBody.cpp
+    SingleMessageConsumer.cpp
+    StreamingAssembler.cpp
+    Template.cpp
+    TemplateRegistry.cpp
+    XMLTemplateParser.cpp
+)
+
+add_library(codecs STATIC
+    ${CODECS_SRCS}
+)
+
+target_link_libraries(codecs
+    PRIVATE
+        common
+)
+
+target_include_directories(common
+    PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/../
+)

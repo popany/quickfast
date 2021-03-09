@@ -7,7 +7,7 @@
 #endif
 #ifndef ASIOSERVICE_H
 #define ASIOSERVICE_H
-#include "AsioService_fwd.h"
+//#include "AsioService_fwd.h"
 #include <Common/QuickFAST_Export.h>
 #include <Common/Logger_fwd.h>
 #include <Common/AtomicCounter.h>

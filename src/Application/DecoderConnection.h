@@ -16,8 +16,9 @@
 #include <Codecs/Decoder_fwd.h>
 #include <Communication/Assembler_fwd.h>
 #include <Communication/Receiver.h>
-#include <Communication/AsioService_fwd.h>
+//#include <Communication/AsioService_fwd.h>
 #include <Application/DecoderConfiguration.h>
+#include <boost/asio.hpp>
 
 namespace QuickFAST{
   namespace Application{
