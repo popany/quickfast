@@ -1,2 +1,3 @@
-add_subdirectory(InterpretApplication)
 add_subdirectory(Examples)
+add_subdirectory(InterpretApplication)
+add_subdirectory(FileToTCP)

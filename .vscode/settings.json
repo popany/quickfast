@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.ipp": "cpp",
+        "tuple": "cpp",
+        "mutex": "cpp",
+        "streambuf": "cpp"
+    }
+}
