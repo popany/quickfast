@@ -64,6 +64,11 @@ namespace QuickFAST
         return filling;
       }
 
+      bool canStartRead() override
+      {
+        return stream_.good() && !stream_.eof();
+      }
+
       // Implement Receiver method
       virtual void resetService()
       {
